@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Pamokų skaičiavimas</title>
+</head>
+<body>
+    <h1>Pamokų skaičiavimas</h1>
+    <form>
+        <label>Pirmadienis: <input type="number" id="pirmadienis" value="5"></label><br>
+        <label>Antradienis: <input type="number" id="antradienis" value="6"></label><br>
+        <label>Trečiadienis: <input type="number" id="treciadienis" value="4"></label><br>
+        <label>Ketvirtadienis: <input type="number" id="ketvirtadienis" value="5"></label><br>
+        <label>Penktadienis: <input type="number" id="penktadienis" value="4"></label><br>
+        <button type="button" onclick="skaiciuoti()">Skaičiuoti</button>
+    </form>
+    <p id="rezultatas"></p>
+
+    <script>
+        function skaiciuoti() {
+            var pirmadienis = parseInt(document.getElementById('pirmadienis').value);
+            var antradienis = parseInt(document.getElementById('antradienis').value);
+            var treciadienis = parseInt(document.getElementById('treciadienis').value);
+            var ketvirtadienis = parseInt(document.getElementById('ketvirtadienis').value);
+            var penktadienis = parseInt(document.getElementById('penktadienis').value);
+
+            var pamokuSkaicius = pirmadienis + antradienis + treciadienis + ketvirtadienis + penktadienis;
+            var minutes = pamokuSkaicius * 45;
+
+            document.getElementById('rezultatas').innerText = 'Pamokų skaičius: ' + pamokuSkaicius + ', tai sudaro minučių: ' + minutes;
+        }
+    </script>
+</body>
+</html>
