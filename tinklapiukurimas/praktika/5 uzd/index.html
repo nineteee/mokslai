@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>palukanu calc</title>
+
+    <script src="script.js"></script>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+      input {
+          margin: 5px 0;
+          padding: 10px;
+          width: 200px;
+      }
+      button {
+          padding: 10px 15px;
+          cursor: pointer;
+      }
+  </style>
+  </head>
+  <body>
+  </head>
+  <body>
+      <h1>Palūkanų Kalkuliatorius</h1>
+      <label for="amount">Suma (P):</label>
+      <input type="number" id="amount" placeholder="Įveskite sumą" required>
+      <br>
+      <label for="rate">Palūkanų norma (R %):</label>
+      <input type="number" id="rate" placeholder="Įveskite palūkanų normą" required>
+      <br>
+      <label for="years">Metai (T):</label>
+      <input type="number" id="years" placeholder="Įveskite metų skaičių" required>
+      <br>
+      <button onclick="calculateInterest()">Apskaičiuoti Palūkanas</button>
+      <h2 id="result"></h2>
+  
+  </body>
+</html>
